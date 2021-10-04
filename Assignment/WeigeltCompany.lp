@@ -1,0 +1,15 @@
+max: 420P1L + 360P1M+300P1S+420P2L+360P2M+300P2S+ 420P3L+360P3M+300P3S;
+Sto_plant1: +20 P1L +15 P1M +12 P1S <= 13000;
+Sto_plant2: +20 P2L +15 P2M +12 P2S <= 12000;
+Sto_plant3: +20 P3L +15 P3M +12 P3S <= 5000;
+
+ExcessCapacity_Plant1: +P1L +P1M +P1S <= 750;
+ExcessCapacity_Plant2: +P2L +P2M +P2S <= 900;
+ExcessCapacity_Plant3: +P3L +P3M +P3S <= 450;
+
+Sal_Large: +P1L +P2L +P3L <= 900;
+Sal_Medium: +P1M +P2M +P3M <= 1200;
+Sal_Small: +P1S +P2S +P3S <= 750;
+
+Per_P1_P2: 0.0013 P1L +0.0013 P1M +0.0013 P1S - 0.0011 P2L -0.0011 P2M -0.0011 P2S = 0;
+Per_P1_P3: 0.0013 P1L +0.0013 P1M +0.0013 P1S - 0.0022 P3L -0.0022 P3M -0.0022P3S = 0; 
