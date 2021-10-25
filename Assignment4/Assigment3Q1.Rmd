@@ -1,0 +1,24 @@
+---
+title: "Assignment3Q1"
+author: "Anujeeth Veerla"
+date: "25/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r }
+library(lpSolveAPI)
+Transportation.lp <- read.lp("TransportationProb.lp")
+Transportation.lp
+solve(Transportation.lp)
+get.objective(Transportation.lp)
+decisionvars <- get.variables(Transportation.lp)
+Const <- get.constraints(Transportation.lp)
+```
+
+
